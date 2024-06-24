@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Nama Lengkap</title>
+</head>
+<body>
+    <h1>Hasil Nama Lengkap</h1>
+    
+    <p id="namaLengkapOutput"></p>
+    <script>
+        // Ambil nama lengkap dari localStorage
+        const namaLengkap = localStorage.getItem('namaLengkap');
+        
+        // Tampilkan nama lengkap
+        if (namaLengkap) {
+            document.getElementById('namaLengkapOutput').textContent = namaLengkap;
+        } else {
+            document.getElementById('namaLengkapOutput').textContent = "Nama lengkap tidak ditemukan.";
+        }
+    </script>
+    
+</body>
+</html>

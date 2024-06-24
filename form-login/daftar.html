@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Nama</title>
+</head>
+<body>
+    <h1>Formulir Nama</h1>
+    <form id="formNama">
+        <label for="namaDepan">Nama Depan:</label>
+        <input type="text" id="namaDepan" name="namaDepan" required>
+        <br>
+        <label for="namaBelakang">Nama Belakang:</label>
+        <input type="text" id="namaBelakang" name="namaBelakang" required>
+        <br>
+        <button type="button" onclick="tampilNamaLengkap()">Tampilkan Nama Lengkap</button>
+    </form>
+    
+    <script>
+        function tampilNamaLengkap() {
+            const namaDepan = document.getElementById('namaDepan').value;
+            const namaBelakang = document.getElementById('namaBelakang').value;
+            const namaLengkap = namaDepan + " " + namaBelakang;
+            
+            // Simpan nama lengkap di localStorage
+            localStorage.setItem('namaLengkap', namaLengkap);
+            
+            // Pindah ke login.html
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
